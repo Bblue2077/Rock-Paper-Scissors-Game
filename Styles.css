@@ -1,0 +1,76 @@
+/* Custom styles */
+.game-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+.player-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hand-images img {
+  width: 100px;
+  margin: 10px;
+  cursor: pointer;
+}
+.scoreboard {
+  margin-top: 20px;
+  text-align: center;
+}
+
+body {
+    background-color: #232323;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif; /* Example font, replace with your action-themed font */
+  }
+  
+  .btn-action {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .btn-blue {
+    background-color: #007bff; /* Bootstrap's primary blue */
+    border-color: #007bff;
+  }
+  
+  .btn-blue:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+    border-color: #0056b3; /* Matching border color */
+  }
+  
+  .btn-red {
+    background-color: #dc3545; /* Bootstrap's danger/red color */
+    border-color: #dc3545;
+  }
+  
+  .btn-red:hover {
+    background-color: #c82333; /* Darker shade of red on hover */
+    border-color: #c82333; /* Matching border color */
+  }
+  
+  .btn-orange {
+    background-color: #fd7e14; /* Bootstrap's warning/orange color */
+    border-color: #fd7e14;
+  }
+  
+  .btn-orange:hover {
+    background-color: #e1660b; /* Darker shade of orange on hover */
+    border-color: #e1660b; /* Matching border color */
+  }
+  
+  /* Underline text on hover for all buttons */
+  .btn-action:hover {
+    text-decoration: underline;
+  }
+  
+  /* Example hover effect for images */
+  img {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  img:hover {
+    transform: scale(1.1); /* Scale up image on hover */
+  }

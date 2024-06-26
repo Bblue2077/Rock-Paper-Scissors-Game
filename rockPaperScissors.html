@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors!</title>
+  <script src="rockPaperScissors.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="Styles" href="Styles.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles */
+    .game-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    .player-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .hand-images img {
+      width: 100px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .scoreboard {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container game-container">
+    <div class="text-center">
+      <h1>Rock, Paper, Scissors!</h1>
+      <!-- Title screen image -->
+      <img src="title-image.jpg" alt="Rock Paper Scissors Title" class="img-fluid">
+    </div>
+    <!-- Player setup -->
+    <div class="player-info">
+      <div>
+        <label for="player-name">Player Name:</label>
+        <input type="text" id="player-name" class="form-control" placeholder="Enter your name">
+        <button onclick="updatePlayerName()">Set Name</button>
+      </div>
+      <div>
+        <label for="game-mode">Select Game-Mode:</label>
+        <select id="game-mode" class="form-control">
+          <option value="game">Single Game</option>
+          <option value="tournament">Tournament</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Game area -->
+    <div id="game">
+      <div class="text-center">
+        <h2>Choose Your Hand...:</h2>
+        <div class="hand-images">
+          <!-- Hand images with onclick events -->
+          <img src="rock.jpg" alt="Rock" onclick="playGame('rock')">
+          <img src="paper.jpg" alt="Paper" onclick="playGame('paper')">
+          <img src="scissors.jpg" alt="Scissors" onclick="playGame('scissors')">
+        </div>
+      </div>
+
+      <!-- Results display -->
+      <div id="results" class="mt-4">
+        <h3>Game Results:</h3>
+        <p id="round-result"></p>
+        <p id="score"></p>
+        <p id="game-result"></p>
+        <button onclick="resetGame()">Reset Game</button>
+      </div>
+    </div>
+
+    <!-- Tournament area (initially hidden) -->
+    <div id="tournament" style="display:none;">
+      <div class="text-center">
+        <h2>Tournament in Progress...</h2>
+        <div>
+          <button onclick="startTournament()">Start Tournament</button>
+        </div>
+      </div>
+      <div id="tournament-results">
+        <h3>Tournament Results:</h3>
+        <p id="tournament-result"></p>
+      </div>
+    </div>
+
+    <!-- Scoreboard -->
+    <div id="scoreboard" class="scoreboard">
+      <h3>Scoreboard:</h3>
+      <p id="player-score">Player: 0</p>
+      <p id="computer-score">Player 2: 0</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and custom JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="rockPaperScissors.js"></script> <!-- Make sure your JavaScript file is included here -->
+</body>
+</html>
